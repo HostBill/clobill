@@ -13,7 +13,6 @@
 (defn format-url-args
   "Sanitize given arguments"
   [args]
-  {:pre (map? args)}
   (str
    (when-not (empty args)
      (let [format-arg #(format "%s=%s" (name (key %)) (quote-plus (val %)))]

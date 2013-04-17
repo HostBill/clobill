@@ -14,7 +14,7 @@
   "Sanitize given arguments"
   [args]
   (str
-   (when-not (empty args)
+   (when (not-empty args)
      (let [format-arg #(format "%s=%s" (name (key %)) (quote-plus (val %)))]
        (str "&" (str/join "&" (map format-arg args)))))))
 

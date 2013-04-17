@@ -1,4 +1,4 @@
-(defproject clobill "0.1.3"
+(defproject clobill "0.1.4"
   :description "clojure hostbill client"
   :url "https://github.com/exoscale/clobill"
   :license {:name "Eclipse Public License"

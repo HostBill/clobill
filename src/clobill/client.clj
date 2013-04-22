@@ -8,7 +8,8 @@
 (defn quote-plus
   "Encode URL and replace + signs by %20"
   [s]
-  (str/replace (URLEncoder/encode (if (keyword? s) (name s) s)) "+" "%20"))
+  (str/replace (URLEncoder/encode
+                (if (keyword? s) (name s) (str s))) "+" "%20"))
 
 (defn format-url-args
   "Sanitize given arguments"
